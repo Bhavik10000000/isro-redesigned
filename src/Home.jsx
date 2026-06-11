@@ -8,6 +8,27 @@ const Home = () => {
     { title: "100+", para: "SUCCESSFUL MISSIONS" },
     // { title: "1st", para: "TO REACH MARS IN 1ST ATTEMPT" },
   ];
+
+  const missions = [
+    {
+      title: "Chandrayaan 3",
+      status: "Successful",
+      date: "August 23, 2023",
+      info: " This is arguably ISRO's greatest achievement to date. On August 23, 2023, India became the first country to soft-land near the lunar South Pole.",
+    },
+    {
+      title: "Chandrayaan 3",
+      status: "Successful",
+      date: "August 23, 2023",
+      info: " This is arguably ISRO's greatest achievement to date. On August 23, 2023, India became the first country to soft-land near the lunar South Pole.",
+    },
+    {
+      title: "Chandrayaan 3",
+      status: "Successful",
+      date: "August 23, 2023",
+      info: " This is arguably ISRO's greatest achievement to date. On August 23, 2023, India became the first country to soft-land near the lunar South Pole.",
+    },
+  ];
   return (
     <>
       <section>
@@ -44,7 +65,26 @@ const Home = () => {
       <section>
         <div>
           <h1>FEATURED MISSIONS</h1>
+          <div className="mission-card-main">
+            {missions.map((e) => (
+              <div className="mission-card">
+                <h2>{e.title}</h2>
+                <span>{e.status}</span>
+                <span>{e.date}</span>
+                <p>{e.info}</p>
+              </div>
+            ))}
+          </div>
         </div>
+
+        <br />
+        <hr />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </section>
     </>
   );
