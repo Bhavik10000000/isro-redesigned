@@ -5,6 +5,11 @@ body {
   overflow-x: hidden;
   width: 100%;
 }
+
+html,
+body {
+  touch-action: none;
+}
 /* * {
   outline: 1px solid red;
 } */
@@ -69,7 +74,7 @@ nav ul {
 nav li {
   font-weight: 400;
   font-size: small;
-
+  color: white;
   /* background-color: rgba(23, 23, 23, 0.2); */
   /* backdrop-filter: blur(10px); */
   border-radius: 100px;
@@ -257,8 +262,8 @@ nav li:hover {
 .icons:hover {
   /* color: rgb(222, 126, 0); */
 
-  width: 45px;
-  height: 45px;
+  /* width: 45px;
+  height: 45px; */
 
   transition: 0.3s ease-out;
   position: sticky;
@@ -269,7 +274,7 @@ nav li:hover {
   transition: 0.3s ease-out;
 }
 .insta:hover {
-  color: #e1306c;
+  color: #b52052;
   transition: 0.3s ease-out;
 }
 .yt:hover {
@@ -277,7 +282,7 @@ nav li:hover {
   transition: 0.3s ease-out;
 }
 .twit:hover {
-  color: rgb(255, 255, 255);
+  color: rgb(243, 254, 219);
   transition: 0.3s ease-out;
 }
 

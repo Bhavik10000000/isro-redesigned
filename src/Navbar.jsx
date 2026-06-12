@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const tabs = [
-    { id: 1, tab: "Home" },
-    { id: 2, tab: "Missions" },
-    { id: 3, tab: "Launches" },
-    { id: 4, tab: "Careers" },
-    { id: 5, tab: "Contact" },
+    { id: 1, tab: "Home", to: "/home" },
+    { id: 2, tab: "About", to: "/about" },
+    { id: 3, tab: "Missions", to: "/missions" },
+    { id: 4, tab: "Careers", to: "/carreer" },
+    { id: 5, tab: "Contact", to: "/contact" },
   ];
   return (
     <div className="div-main-nav">
@@ -16,9 +16,9 @@ const Navbar = () => {
         <nav className="div-nav">
           <ul>
             {tabs.map((e) => (
-              //   <Link to={e.tab}>
-              <li key={e.id}>{e.tab}</li>
-              //   </Link>
+              <Link to={e.to}>
+                <li key={e.id}>{e.tab}</li>
+              </Link>
             ))}
           </ul>
         </nav>

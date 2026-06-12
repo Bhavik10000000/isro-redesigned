@@ -1,0 +1,14 @@
+.footer-logo {
+  width: 100px;
+}
+
+.footer-main {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.copyright {
+  display: flex;
+  justify-content: center;
+  font-size: smaller;
+}
