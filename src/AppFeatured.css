@@ -1,0 +1,46 @@
+.cards {
+  display: flex;
+  /* justify-content: center; */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 200px;
+  border: 1px white solid;
+  justify-content: flex-start;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background-color: rgba(26, 26, 26, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.card span1 {
+  font-weight: 700;
+  font-size: x-large;
+  border-radius: 25px;
+  padding: 0px 5px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.card span2 {
+  font-weight: 500;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+.card span3 {
+  font-size: small;
+  font-weight: 300;
+}
+
+.card span4 {
+  font-size: small;
+  border: 1px white solid;
+  font-weight: 400;
+  font-style: italic;
+  border-radius: 5px;
+  padding: 5px 5px;
+  text-align: center;
+  margin-top: 15px;
+}
