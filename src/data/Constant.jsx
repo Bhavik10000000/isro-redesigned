@@ -87,8 +87,8 @@ export const missions = [
 
 export const keyPoints = [
   { title: "54+", para: "YEARS OF SPACE EXPLORATION" },
-  { title: "90%", para: "SUCCESSFUL RATE" },
-  { title: "124+", para: "SUCCESSFUL MISSIONS" },
+  { title: "85%", para: "SUCCESSFUL RATE" },
+  { title: "124", para: "SUCCESSFUL MISSIONS" },
   { title: "569", para: "TOTAL SATELLITES LAUNCHED" },
 ];
 

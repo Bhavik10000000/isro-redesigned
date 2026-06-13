@@ -1,6 +1,5 @@
 import React from "react";
 import "../css/App.css";
-// import image from "../public/image.png";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { keyPoints } from "../data/Constant";
@@ -9,6 +8,8 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { vehicles } from "../data/Constant";
 import { contributes } from "../data/Constant";
+import { motion } from "motion/react";
+
 const Home = () => {
   const shortMissions = missions.slice(0, 3);
   return (
@@ -20,10 +21,14 @@ const Home = () => {
               <span>
                 <b>Welcome to the</b>
               </span>
-              <h1>
+              <motion.h1
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+              >
                 INDIAN SPACE <br />
                 RESEARCH ORGANIZATION
-              </h1>
+              </motion.h1>
               <p>
                 Discover India's missions, satellites, rockets and future in
                 space.
@@ -36,7 +41,11 @@ const Home = () => {
               </div>{" "}
             </div>
             <div className="right-div">
-              <div>
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+              >
                 <a
                   href="https://share.google/JuzM54MLKeRhMPEkj"
                   target="_blank"
@@ -65,14 +74,17 @@ const Home = () => {
                   <FaXTwitter className="icons twit" />
                 </a>
                 <br />
-              </div>
+              </motion.div>
             </div>
           </div>
           <section>
             <div className="section1-div">
               {keyPoints.map((e) => (
                 <div className="section1-div-div">
-                  <span className="span1">{e.title}</span>
+                  <span className="span1">
+                    {/* <CountUp start={0} end={e.para} duration={5} /> */}
+                    {e.title}
+                  </span>
                   <span className="span2">{e.para}</span>
                 </div>
               ))}
