@@ -1,0 +1,52 @@
+.um-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.um-card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px rgb(50, 50, 50) solid;
+  background-color: rgb(50, 50, 50, 0.2);
+  padding: 20px 20px;
+  width: 300px;
+  height: 250px;
+}
+.um-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 70px;
+  height: 400px;
+}
+
+.um-card img {
+  width: 300px;
+  height: 250px;
+}
+
+.um-card span1 {
+  font-size: x-large;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: rgb(222, 126, 0);
+}
+
+.um-card span2 {
+  font-size: large;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+.um-card p {
+  font-size: small;
+  font-weight: 100;
+}
+
+.um-card span3 {
+  font-weight: 300;
+  font-size: small;
+  text-transform: capitalize;
+  padding: 25px 20px;
+}

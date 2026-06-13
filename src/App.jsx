@@ -1,14 +1,15 @@
 import React from "react";
-import "./App.css";
+import "./css/App.css";
 import Navbar from "./Navbar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./Home";
 import { useEffect } from "react";
 import Footer from "./Footer";
-import About from "./About";
-import Mission from "./Mission";
-import Carreer from "./Carreer";
-import Contact from "./Contact";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Mission from "./pages/Mission";
+import Carreer from "./pages/Carreer";
+import Contact from "./pages/Contact";
+
 const App = () => {
   useEffect(() => {
     const preventZoom = (e) => {

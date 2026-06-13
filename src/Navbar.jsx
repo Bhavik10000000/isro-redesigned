@@ -1,14 +1,8 @@
 import React from "react";
-import "./App.css";
+import "./css/App.css";
 import { Link } from "react-router-dom";
+import { tabs } from "./data/Constant";
 const Navbar = () => {
-  const tabs = [
-    { id: 1, tab: "Home", to: "/home" },
-    { id: 2, tab: "About", to: "/about" },
-    { id: 3, tab: "Missions", to: "/missions" },
-    { id: 4, tab: "Careers", to: "/carreer" },
-    { id: 5, tab: "Contact", to: "/contact" },
-  ];
   return (
     <div className="div-main-nav">
       <img src="logo.png" className="logo" />

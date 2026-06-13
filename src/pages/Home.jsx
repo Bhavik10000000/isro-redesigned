@@ -1,18 +1,13 @@
 import React from "react";
-import "./App.css";
+import "../css/App.css";
 // import image from "../public/image.png";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import FeaturedMission from "./FeaturedMissions";
+import FeaturedMission from "../FeaturedMissions";
+import UpcommingMission from "../UpcommingMission";
+import { keyPoints } from "../data/Constant";
 
 const Home = () => {
-  const section1 = [
-    { title: "54+", para: "YEARS OF SPACE EXPLORATION" },
-    { title: "90%", para: "SUCCESSFUL RATE" },
-    { title: "100+", para: "SUCCESSFUL MISSIONS" },
-    { title: "1st", para: "TO REACH MARS IN 1ST ATTEMPT" },
-  ];
-
   return (
     <>
       <section>
@@ -50,7 +45,7 @@ const Home = () => {
           </div>
           <section>
             <div className="section1-div">
-              {section1.map((e) => (
+              {keyPoints.map((e) => (
                 <div className="section1-div-div">
                   <span className="span1">{e.title}</span>
                   <spanc className="span2">{e.para}</spanc>
@@ -61,6 +56,9 @@ const Home = () => {
         </div>
       </section>
 
+      <section className="section2-bg">
+        <UpcommingMission />
+      </section>
       <section className="section2-bg">
         <FeaturedMission />
       </section>

@@ -1,68 +1,10 @@
 import React from "react";
-import "./AboutApp.css";
+import "../css/App.css";
+import "../css/About.css";
 
+import { pioneers } from "../data/Constant";
+import { timeline } from "../data/Constant";
 const About = () => {
-  const timeline = [
-    {
-      year: "1969",
-      title: "ISRO Founded",
-      description:
-        "The Indian Space Research Organisation was established under the leadership of Dr. Vikram Sarabhai.",
-    },
-    {
-      year: "1975",
-      title: "Aryabhata",
-      description:
-        "India's first satellite, Aryabhata, was launched into space.",
-    },
-    {
-      year: "2008",
-      title: "Chandrayaan-1",
-      description:
-        "India's first lunar mission confirmed the presence of water molecules on the Moon.",
-    },
-    {
-      year: "2014",
-      title: "Mars Orbiter Mission",
-      description:
-        "India became the first nation to reach Mars orbit in its maiden attempt.",
-    },
-    {
-      year: "2023",
-      title: "Chandrayaan-3",
-      description:
-        "India became the first country to successfully land near the Moon's south pole.",
-    },
-  ];
-
-  const pioneers = [
-    {
-      name: "Dr. Vikram Sarabhai",
-      role: "Father of the Indian Space Program",
-      img: "sarabhai.webp",
-    },
-    {
-      name: "Prof. Satish Dhawan",
-      role: "Former Chairman, ISRO",
-      img: "dhawan.jpg",
-    },
-    {
-      name: "Dr. A. P. J. Abdul Kalam",
-      role: "Missile Scientist & Former President",
-      img: "kalam.jpg",
-    },
-    {
-      name: "Dr. U. R. Rao",
-      role: "Satellite Program Pioneer",
-      img: "rao.jpg",
-    },
-    {
-      name: "Dr. Nambi Narayana",
-      role: "Aerospace Pioneer",
-      img: "narayana.jpeg",
-    },
-  ];
-
   return (
     <>
       <section className="about-section">

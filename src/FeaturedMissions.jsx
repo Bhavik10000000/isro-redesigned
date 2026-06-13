@@ -1,5 +1,5 @@
 import React from "react";
-import "./AppFeatured.css";
+import "./css/AppFeatured.css";
 import { ArrowUpRight } from "lucide-react";
 
 const FeaturedMissions = () => {
