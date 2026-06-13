@@ -3,11 +3,14 @@ import "../css/App.css";
 // import image from "../public/image.png";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import FeaturedMission from "../FeaturedMissions";
-import UpcommingMission from "../UpcommingMission";
 import { keyPoints } from "../data/Constant";
-
+import { missions } from "../data/Constant";
+import { Link } from "react-router-dom";
+import { ArrowUpRight } from "lucide-react";
+import { vehicles } from "../data/Constant";
+import { contributes } from "../data/Constant";
 const Home = () => {
+  const shortMissions = missions.slice(0, 3);
   return (
     <>
       <section>
@@ -26,19 +29,41 @@ const Home = () => {
                 space.
               </p>
               <div className="cta-button">
-                <button className="one">Explore Missions</button>
+                <Link to="/mission" element={"Mission"}>
+                  <button className="one">Explore Missions</button>
+                </Link>
                 <button className="two">Watch Launches</button>
               </div>{" "}
             </div>
             <div className="right-div">
               <div>
-                <FaFacebook className="icons face" />
+                <a
+                  href="https://share.google/JuzM54MLKeRhMPEkj"
+                  target="_blank"
+                >
+                  <FaFacebook className="icons face" />
+                </a>
                 <br />
-                <FaInstagram className="icons insta" />
+                <a
+                  href="https://share.google/BeXsLKiDWssaHdh6l"
+                  target="_blank"
+                >
+                  <FaInstagram className="icons insta" />
+                </a>
                 <br />
-                <FaYoutube className="icons yt" />
+                <a
+                  href="https://share.google/EoVTAirJize8aVT4l"
+                  target="_blank"
+                >
+                  <FaYoutube className="icons yt" />
+                </a>
                 <br />
-                <FaXTwitter className="icons twit" />
+                <a
+                  href="https://share.google/v6HRknVUcEml2S6oe"
+                  target="_blank"
+                >
+                  <FaXTwitter className="icons twit" />
+                </a>
                 <br />
               </div>
             </div>
@@ -48,7 +73,7 @@ const Home = () => {
               {keyPoints.map((e) => (
                 <div className="section1-div-div">
                   <span className="span1">{e.title}</span>
-                  <spanc className="span2">{e.para}</spanc>
+                  <span className="span2">{e.para}</span>
                 </div>
               ))}
             </div>
@@ -56,11 +81,92 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="section2-bg">
-        <UpcommingMission />
+      <section className="section2">
+        <div className="section-heads">
+          <hr />
+          <span-title>Launch vehicles</span-title>
+          <hr />
+        </div>
+
+        <div className="vehicles-container">
+          <div className="vehicles-left">
+            <span-lv>
+              ISRO's
+              <br /> Powerhouses <br /> in Space
+            </span-lv>
+
+            <Link to="/mission" className="view-all-link">
+              <button> View All Launch Vehicles</button>
+              <ArrowUpRight
+                size={18}
+                strokeWidth={2.5}
+                className="arrow-icon-vehi"
+              />
+            </Link>
+          </div>
+
+          <div className="vehicles-right">
+            {vehicles.map((e, index) => (
+              <div className="v-individual" key={index}>
+                <img src={e.img} className="v-name-img" />
+                <span-vff>{e.full}</span-vff>
+                <span style={{ color: "#ffffff", fontSize: "12px" }}>
+                  {e.cap}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
+
+      <section className="contribution-section">
+        <div className="section-heads">
+          <hr />
+          <span-title>where isro contributes</span-title>
+          <hr />
+        </div>
+
+        <div className="contribution-grid">
+          {contributes.map((item) => (
+            <a href={item.link} target="_blank">
+              <div className="contribution-card" key={item.id}>
+                <div className="c-icon-box">{item.icon}</div>
+                <span className="c-title">{item.title}</span>
+                <p className="c-para">{item.para}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
       <section className="section2-bg">
-        <FeaturedMission />
+        <div className="section-heads">
+          <hr />
+          <span-title>FEATURED MISSIONS</span-title>
+          <hr />
+        </div>
+        <div className="missions">
+          {shortMissions.map((e) => (
+            <div className="missions-card">
+              <img src={e.img} />
+              <span-name>{e.name}</span-name>
+              <span-mc-type>{e.type}</span-mc-type>
+              <span-date>{e.date}</span-date>
+              <span-info>{e.info}</span-info>
+            </div>
+          ))}
+        </div>
+        <Link to="/mission" element={"Mission"}>
+          <button>View All</button>
+        </Link>
+      </section>
+
+      <section className="section2-bg">
+        <div className="section-heads">
+          <hr />
+          <span-title>Launch vehicles</span-title>
+          <hr />
+        </div>
       </section>
     </>
   );

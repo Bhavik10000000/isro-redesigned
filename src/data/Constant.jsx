@@ -1,3 +1,5 @@
+import { Globe, Rocket, School, Sprout, Satellite } from "lucide-react";
+
 export const pioneers = [
   {
     name: "Dr. Vikram Sarabhai",
@@ -29,44 +31,56 @@ export const pioneers = [
 export const missions = [
   {
     id: "M1",
-    name: "Chandrayaan-3",
+    date: "1st Jan, 2026",
+    name: "CHANDRAYAAN 3",
     status: "Completed",
-    type: "Deep Space",
-    img: "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4",
+    type: "Lunar",
+    info: "Info Info Info Info Info ",
+    img: "ch3.png",
   },
   {
     id: "M2",
-    name: "Aditya-L1",
+    date: "1st Jan, 2026",
+    name: "ADITYA-L1",
     status: "Ongoing",
-    type: "Deep Space",
-    img: "https://images.unsplash.com/photo-1460186136353-977e9d6085a1",
+    type: "Solar",
+    info: "Info Info Info Info Info ",
+    img: "aditya.png",
   },
   {
     id: "M3",
-    name: "Gaganyaan",
+    date: "1st Jan, 2026",
+    name: "GAGANYAAN",
     status: "Upcoming",
-    type: "Human Spaceflight",
-    img: "https://images.unsplash.com/photo-1764195287345-2086f504cb0b",
+    type: "Spaceflight",
+    info: "Info Info Info Info Info ",
+    img: "gagan.png",
   },
   {
     id: "M4",
+    date: "1st Jan, 2026",
     name: "NISAR",
     status: "Upcoming",
     type: "Earth Observation",
+    info: "Info Info Info Info Info ",
     img: "https://images.unsplash.com/photo-1457364887197-9150188c107b",
   },
   {
     id: "M5",
+    date: "1st Jan, 2026",
     name: "XPoSat",
     status: "Completed",
     type: "Space Science",
+    info: "Info Info Info Info Info ",
     img: "https://images.unsplash.com/photo-1460186136353-977e9d6085a1",
   },
   {
     id: "M6",
+    date: "1st Jan, 2026",
     name: "GSAT-20",
     status: "Upcoming",
     type: "Communications",
+    info: "Info Info Info Info Info ",
     img: "https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4",
   },
 ];
@@ -115,5 +129,53 @@ export const timeline = [
     title: "Chandrayaan-3",
     description:
       "India became the first country to successfully land near the Moon's south pole.",
+  },
+];
+export const vehicles = [
+  { img: "pslv.png", full: "Polar Satellite Lauch Vehicle", cap: "107 Kg" },
+  {
+    img: "gslv.png",
+    full: "Geosynchronous Satellite Launch Vehicle",
+    cap: "107 Kg",
+  },
+  { img: "lvm3.png", full: "Launch Vehicle Mark-3", cap: "107 Kg" },
+  { img: "hrlv.png", full: "Human-Rated Launch Vehicle", cap: "107 Kg" },
+];
+
+export const contributes = [
+  {
+    id: 1,
+    title: "Disaster Management",
+    para: "Providing real-time satellite data for flood, cyclone, and fire monitoring.",
+    icon: <Globe size={32} strokeWidth={1.5} />,
+    link: "https://share.google/KeZG2cyhpQRdv17HT",
+  },
+  {
+    id: 2,
+    title: "Tele-Education",
+    para: "Connecting rural India with quality education via satellite communication.",
+    icon: <School size={32} strokeWidth={1.5} />,
+    link: "https://share.google/CbaWt8dUWCNxgPsoi",
+  },
+  {
+    id: 3,
+    title: "Agriculture",
+    para: "Helping farmers with crop yield prediction and soil health monitoring.",
+    icon: <Sprout size={32} strokeWidth={1.5} />,
+    link: "https://share.google/heI1SsSDybG39a8DN",
+  },
+  {
+    id: 4,
+    title: "Navigation",
+    para: "Powering NavIC, India's own Global Positioning System for precise positioning and timing.",
+    icon: <Satellite size={32} strokeWidth={1.5} />,
+    link: "https://share.google/r8JSJWw6Zb5y847qf",
+  },
+  {
+    id: 5,
+    title: "Defense",
+    para: "Strengthening national security with usingadvanced surveillance satellites.",
+    icon: <Rocket size={32} strokeWidth={1.5} />,
+    link: "https://share.google/emZYbqgPcxehkmfrB",
   },
 ];

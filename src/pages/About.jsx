@@ -1,6 +1,5 @@
 import React from "react";
 import "../css/App.css";
-import "../css/About.css";
 
 import { pioneers } from "../data/Constant";
 import { timeline } from "../data/Constant";
