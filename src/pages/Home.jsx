@@ -94,6 +94,12 @@ const Home = () => {
               ISRO's
               <br /> Powerhouses <br /> in Space
             </span-lv>
+            <p>
+              ISRO utilizes a versatile fleet of launch vehicles to reach space,
+              ranging from the reliable PSLV, known as the "workhorse" for polar
+              orbits, to the heavy-lift LVM3, which carries massive
+              communication satellites and human-rated missions.
+            </p>
 
             <Link to="/mission" className="view-all-link">
               <button> View All Launch Vehicles</button>
@@ -110,9 +116,6 @@ const Home = () => {
               <div className="v-individual" key={index}>
                 <img src={e.img} className="v-name-img" />
                 <span-vff>{e.full}</span-vff>
-                <span style={{ color: "#ffffff", fontSize: "12px" }}>
-                  {e.cap}
-                </span>
               </div>
             ))}
           </div>

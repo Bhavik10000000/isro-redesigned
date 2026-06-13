@@ -462,7 +462,7 @@ span-title {
   display: flex;
   align-items: center;
   align-content: center;
-  justify-content: space-between;
+  justify-content: center;
   align-items: stretch;
   gap: 70px;
   padding: 60px 1% 0px 1%;
@@ -474,6 +474,12 @@ span-title {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.vehicles-left p {
+  margin-top: -60px;
+  font-weight: 300;
+  max-width: 350px;
+  font-size: small;
 }
 
 span-lv {
@@ -509,7 +515,7 @@ span-lv {
 
 .view-all-link button:hover {
   background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
+  /* transform: translateY(-2px); */
 }
 
 .arrow-icon-vehi {
@@ -518,59 +524,66 @@ span-lv {
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 10px;
 }
+.arrow-icon-vehi:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
 
 .vehicles-right {
+  width: auto;
+  margin-left: 100px;
+  text-transform: uppercase;
+  padding: 0px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  align-content: center;
-  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.01);
 
-  margin-left: 30px;
-  gap: 15px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  padding: 15px;
-  border-radius: 16px;
-  width: 500px;
+  justify-content: right;
+  border: 1px #ffffff solid;
+  padding: 10px 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
 }
 
 .v-individual {
+  height: 90px;
   display: flex;
   align-items: center;
-  gap: 20px;
-  justify-content: left;
-  padding: 12px;
-  border-radius: 12px;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  border: 1px solid transparent;
-}
-
-.v-individual:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.08);
+  /* gap: 30px; */
+  border-radius: 20px;
+  position: relative;
 }
 
 .v-name-img {
-  width: 80px; /* The rocket is narrow */
-  height: 200px; /* The rocket is tall */
-  object-fit: contain; /* Prevents squishing */
-
-  /* Remove the rotation so they stand upright */
-  /* transform: rotate(-90deg); */
-
-  /* Styling */
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-  padding: 10px; /* Gives the rocket breathing room inside the border */
-  display: block;
+  width: 130px;
+  height: 120px;
+  object-fit: contain;
+  transform: rotate(-0deg) perspective(1200px) scale(1.55);
+  background: transparent;
+  border: none;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.v-name-img:hover {
+  transform: translateX(-40px) scale(1.9);
+}
+.v-name-img:hover .span-vff {
+  background: linear-gradient(
+    90deg,
+    rgb(255, 119, 0) 0%,
+    rgb(163, 106, 0) 50%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  filter: blur(10px);
 }
 span-vff {
   font-size: 15px;
   color: #e0e0e0;
   font-weight: 500;
+  border: 1px solid white;
+
+  padding: 5px 20px;
+  border-radius: 20px;
+  width: 340px;
 }
 
 .contribution-section {
@@ -579,12 +592,13 @@ span-vff {
     linear-gradient(
       rgba(0, 0, 0, 1),
       rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 1)
     ),
     url("/image3.jpg");
+  /* opacity: 50%; */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -592,8 +606,8 @@ span-vff {
   flex-direction: column;
   justify-content: center;
   /* height: 510px; */
+  padding-bottom: 60px;
   align-items: center;
-  margin-bottom: 100px;
 }
 
 .contribution-grid {
@@ -631,11 +645,7 @@ span-vff {
   transform: translateY(-6px);
   border-color: rgba(255, 255, 255, 1);
   backdrop-filter: blur(0px);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.06) 10%,
-    rgba(0, 0, 0, 0.02) 100%
-  );
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.06) 10%, #00000005 100%);
 }
 
 .c-icon-box {
@@ -650,7 +660,7 @@ span-vff {
 
 .c-title {
   display: block;
-  font-size: 15px;
+  font-size: 16px;
   text-transform: uppercase;
   font-weight: 600;
   color: #ffffff;
@@ -659,15 +669,17 @@ span-vff {
 }
 
 .c-para {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.6;
-  color: #8e8e93;
-  font-weight: 400;
+  color: #ffffff;
+  font-weight: 300;
 }
 
 .contribution-card:hover .c-icon-box {
   color: #ff9d00;
   transform: scale(1.1);
+  color: #ff9d00;
+  transition: all 0.3s ease;
 }
 
 .about-section {
