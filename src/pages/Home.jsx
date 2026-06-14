@@ -18,27 +18,32 @@ const Home = () => {
         <div className="image">
           <div className="hero-section">
             <div className="left-div">
-              <span>
-                <b>Welcome to the</b>
-              </span>
-              <motion.h1
+              <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
               >
-                INDIAN SPACE <br />
-                RESEARCH ORGANIZATION
-              </motion.h1>
-              <p>
-                Discover India's missions, satellites, rockets and future in
-                space.
-              </p>
-              <div className="cta-button">
-                <Link to="/mission" element={"Mission"}>
-                  <button className="one">Explore Missions</button>
-                </Link>
-                <button className="two">Watch Launches</button>
-              </div>{" "}
+                <span>
+                  <b>Welcome to the</b>
+                </span>
+                <h1>
+                  INDIAN SPACE <br />
+                  RESEARCH ORGANIZATION
+                </h1>
+                <p>
+                  Discover India's missions, satellites, rockets and future in
+                  space.
+                </p>
+                <div className="cta-button">
+                  <Link to="/mission" element={"Mission"}>
+                    <button className="one">Explore Missions</button>
+                  </Link>
+                  <button className="two">Watch Launches</button>
+                </div>
+              </motion.div>
+            </div>
+            <div className="mid-home">
+              <img src="satellite.png" />
             </div>
             <div className="right-div">
               <motion.div
@@ -127,7 +132,7 @@ const Home = () => {
             {vehicles.map((e, index) => (
               <div className="v-individual" key={index}>
                 <img src={e.img} className="v-name-img" />
-                <span-vff>{e.full}</span-vff>
+                <span className="span-vff">{e.full}</span>
               </div>
             ))}
           </div>
