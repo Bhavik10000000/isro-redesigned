@@ -95,7 +95,7 @@ export const keyPoints = [
 export const tabs = [
   { id: 1, tab: "Home", to: "/home" },
   { id: 2, tab: "About", to: "/about" },
-  { id: 3, tab: "Missions", to: "/missions" },
+  { id: 3, tab: "Missions", to: "/mission" },
   { id: 4, tab: "Careers", to: "/carreer" },
   { id: 5, tab: "Contact", to: "/contact" },
 ];

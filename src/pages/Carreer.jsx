@@ -1,7 +1,12 @@
 import React from "react";
+import Developing from "../Developing";
 
 const Carreer = () => {
-  return <div></div>;
+  return (
+    <div>
+      <Developing />
+    </div>
+  );
 };
 
 export default Carreer;

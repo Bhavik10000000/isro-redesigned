@@ -181,13 +181,13 @@ const Home = () => {
         </Link>
       </section>
 
-      <section className="section2-bg">
+      {/* <section className="section2-bg">
         <div className="section-heads">
           <hr />
           <span-title>Launch vehicles</span-title>
           <hr />
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

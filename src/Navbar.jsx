@@ -10,7 +10,7 @@ const Navbar = () => {
         <nav className="div-nav">
           <ul>
             {tabs.map((e) => (
-              <Link to={e.to}>
+              <Link to={e.to} onClick={window.scrollTo(0, 0)}>
                 <li key={e.id}>{e.tab}</li>
               </Link>
             ))}

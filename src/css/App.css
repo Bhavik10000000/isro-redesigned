@@ -12,6 +12,9 @@ body {
 html,
 body {
   touch-action: none;
+  background-color: #000000 !important;
+  margin: 0;
+  padding: 0;
 }
 
 .main-div {
@@ -198,10 +201,10 @@ nav li:hover {
 @keyframes satImg {
   from {
     transform: translateX(0) translateY(-50px) translateZ(0) scale(1)
-      rotate(-20deg);
+      rotate(-40deg);
   }
   to {
-    transform: translateX(-150px) translateY(+150px) translateZ(100px)
+    transform: translateX(-150px) translateY(+100px) translateZ(100px)
       scale(1.5) rotate(0deg);
   }
 }
@@ -1092,8 +1095,95 @@ span-lv {
 .copyright {
   display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   font-size: 13px;
   color: #8e8e93;
   margin-top: 10px;
   margin-bottom: 20px;
+}
+
+.footer {
+  padding: 0px 150px;
+  display: flex;
+  height: 210px;
+}
+.footer-left {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+.footer-title {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.footer-info {
+  font-size: small;
+  font-weight: 400;
+  color: rgb(203, 203, 203);
+}
+.join-button {
+  padding: 4px 10px;
+  width: 70px;
+  height: auto;
+  font-size: small;
+  font-weight: 500;
+  margin-top: 25px;
+  background-color: #ff6f00;
+  color: white;
+  border-radius: 50px;
+}
+.footer-mid {
+  /* min-width: 35%; */
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  margin-top: -20px;
+}
+.footer-mid li {
+  color: rgb(209, 209, 209);
+  list-style: none;
+  padding: 3px 0px;
+  font-size: medium;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-weight: 300;
+}
+.footer-mid li:hover {
+  color: white;
+  font-weight: 400;
+}
+.footer-right {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  margin-left: auto;
+}
+.footer-icons {
+  width: 30px;
+  height: 30x;
+  background: transparent;
+  padding: -10px -10px;
+  /* margin: auto; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: top;
+  transition: all 0.3s ease;
+  color: white;
+}
+.footer-follow {
+  font-size: medium;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.footer-section {
+  display: block;
 }

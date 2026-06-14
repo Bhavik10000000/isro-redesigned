@@ -3,10 +3,12 @@ import "../css/App.css";
 
 import { pioneers } from "../data/Constant";
 import { timeline } from "../data/Constant";
+import Developing from "../Developing";
 const About = () => {
   return (
     <>
-      <section className="about-section">
+      <Developing />
+      {/* <section className="about-section">
         <h2>Journey Through Time</h2>
 
         <div className="timeline-container">
@@ -20,7 +22,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* PIONEERS */}
       <section className="about-section">
         <h2>Great Pioneers</h2>
 
@@ -35,7 +36,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* ACHIEVEMENTS */}
       <section className="about-section">
         <h2>Major Achievements</h2>
 
@@ -62,7 +62,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* FUTURE */}
       <section className="about-section">
         <h2>Future Vision</h2>
 
@@ -87,7 +86,7 @@ const About = () => {
             <p>Expanding India's presence beyond Earth orbit.</p>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };
