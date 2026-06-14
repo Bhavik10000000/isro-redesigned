@@ -23,6 +23,7 @@
   justify-content: center;
   text-align: center;
   max-height: 500px;
+  width: 700px;
 }
 .top {
   display: flex;
@@ -61,11 +62,11 @@
 }
 @keyframes rightAni {
   from {
-    transform: translateX(-60px) translateY(50px) translateZ(0) scale(1)
+    transform: translateX(-60px) translateY(55px) translateZ(0) scale(1)
       rotate(20deg);
   }
   to {
-    transform: translateX(-108px) translateY(-7px) translateZ(0) scale(1)
+    transform: translateX(-108px) translateY(-5px) translateZ(0) scale(1)
       rotate(0deg);
   }
 }
