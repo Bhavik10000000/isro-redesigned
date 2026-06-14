@@ -11,29 +11,33 @@ import Carreer from "./pages/Carreer";
 import Contact from "./pages/Contact";
 
 const App = () => {
-  // useEffect(() => {
-  //   const preventZoom = (e) => {
-  //     if (
-  //       (e.ctrlKey || e.metaKey) &&
-  //       (e.type === "wheel" || e.key === "+" || e.key === "-" || e.key === "0")
-  //     ) {
-  //       e.preventDefault();
-  //     }
-  //   };
-  //   const preventPinch = (e) => {
-  //     if (e.touches.length > 1) e.preventDefault();
-  //   };
+  document.querySelectorAll("img").forEach((img) => {
+    img.addEventListener("dragstart", (e) => e.preventDefault());
+  });
 
-  //   document.addEventListener("wheel", preventZoom, { passive: false });
-  //   document.addEventListener("keydown", preventZoom);
-  //   document.addEventListener("touchstart", preventPinch, { passive: false });
+  useEffect(() => {
+    const preventZoom = (e) => {
+      if (
+        (e.ctrlKey || e.metaKey) &&
+        (e.type === "wheel" || e.key === "+" || e.key === "-" || e.key === "0")
+      ) {
+        e.preventDefault();
+      }
+    };
+    const preventPinch = (e) => {
+      if (e.touches.length > 1) e.preventDefault();
+    };
 
-  //   return () => {
-  //     document.removeEventListener("wheel", preventZoom);
-  //     document.removeEventListener("keydown", preventZoom);
-  //     document.removeEventListener("touchstart", preventPinch);
-  //   };
-  // }, []);
+    document.addEventListener("wheel", preventZoom, { passive: false });
+    document.addEventListener("keydown", preventZoom);
+    document.addEventListener("touchstart", preventPinch, { passive: false });
+
+    return () => {
+      document.removeEventListener("wheel", preventZoom);
+      document.removeEventListener("keydown", preventZoom);
+      document.removeEventListener("touchstart", preventPinch);
+    };
+  }, []);
   return (
     <BrowserRouter>
       <Navbar />

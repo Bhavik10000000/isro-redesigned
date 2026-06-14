@@ -195,17 +195,31 @@ nav li:hover {
 .mid-home {
   margin-right: 70px;
 }
-.mid-home img {
-  width: 200px;
-  transition: all 6s ease;
+@keyframes satImg {
+  from {
+    transform: translateX(0) translateY(-50px) translateZ(0) scale(1)
+      rotate(-20deg);
+  }
+  to {
+    transform: translateX(-150px) translateY(+150px) translateZ(100px)
+      scale(1.5) rotate(0deg);
+  }
 }
 
-.mid-home img:hover {
+.mid-home img {
+  width: 200px;
+  animation: satImg 10s ease-in-out infinite alternate;
+  user-select: none;
+  /* transition: all 6s ease; */
+}
+
+/* .mid-home img:hover {
   transform: translateX(-100px) translateY(+100px) translateZ(50px)
     rotate(20deg) scale(1.4);
 
   transition: all 6s ease;
-}
+} */
+
 .logo,
 .emblen {
   width: 60px;
@@ -310,6 +324,21 @@ nav li:hover {
 }
 
 .section2-bg {
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 1)
+    ),
+    url("/image5.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -335,6 +364,7 @@ nav li:hover {
     rgba(255, 255, 255, 0.03) 0%,
     rgba(255, 255, 255, 0.01) 100%
   );
+  backdrop-filter: blur(4px);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -351,10 +381,20 @@ nav li:hover {
     rgba(255, 255, 255, 0.06) 0%,
     rgba(255, 255, 255, 0.02) 100%
   );
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0);
+  backdrop-filter: blur(0px);
 }
 
+@keyframes missionsImg {
+  from {
+    transform: translateX(0) translateY(0) translateZ(0) scale(1);
+  }
+  to {
+    transform: translateX(0px) translateY(-30px) translateZ(0) scale(1.1);
+  }
+}
 .missions-card img {
+  animation: missionsImg 5s ease-in-out infinite alternate;
   width: 240%;
   height: 270px;
   object-fit: contain;
@@ -469,8 +509,8 @@ span-title {
   background-image:
     linear-gradient(
       rgba(0, 0, 0, 1),
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 1)
     ),
     url("/image2.jpg");
@@ -560,7 +600,7 @@ span-lv {
   padding: 0px;
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.01);
+  /* background: rgba(255, 255, 255, 0.01); */
 
   justify-content: right;
   /* border: 1px #ffffff solid; */
@@ -575,6 +615,7 @@ span-lv {
   align-items: center;
   /* gap: 30px; */
   border-radius: 20px;
+  transition: all 2s ease-out;
   position: relative;
 }
 
@@ -587,7 +628,7 @@ span-lv {
   border: none;
   margin-left: 40px;
   margin-right: 40px;
-  transition: all 0.5s ease;
+  transition: all 1s ease;
   /* transform: rotate(20deg) scale(1.55); */
 }
 
@@ -598,7 +639,7 @@ span-lv {
   border: 1px solid white;
 
   padding: 5px 20px;
-  transition: all 0.5s ease;
+  transition: all 1s ease;
   border-radius: 20px;
   width: 340px;
 }
@@ -611,13 +652,16 @@ span-lv {
     rgba(255, 255, 255, 0.05) 100%
   );
   filter: blur(8px);
-  transition: all 0.3s ease-out;
+  transition: all 2s ease-out;
   transform: translateX(+80px) scale(1.5);
 }
-
+.v-individual:hover {
+  transition: all 2s ease-out;
+  transform: translateX(-100px) scale(1);
+}
 .v-individual:hover .v-name-img {
   transform: translateX(-40px) scale(1.9);
-  transition: all 0.5s ease;
+  transition: all 1s ease;
   /* transform: rotate(0deg) scale(1.9); */
 }
 
