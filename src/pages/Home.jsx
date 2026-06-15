@@ -161,6 +161,9 @@ const Home = () => {
           ))}
         </div>
       </section>
+      <div className="div-circle">
+        <div className="circle">Hello</div>
+      </div>
 
       <section className="section2-bg">
         <div className="section-heads">
