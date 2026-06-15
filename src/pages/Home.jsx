@@ -149,7 +149,10 @@ const Home = () => {
         <div className="contribution-grid">
           {contributes.map((item) => (
             <a href={item.link} target="_blank">
-              <div className="contribution-card" key={item.id}>
+              <div
+                className={`contribution-card card-${item.id}`}
+                key={item.id}
+              >
                 <div className="c-icon-box">{item.icon}</div>
                 <span className="c-title">{item.title}</span>
                 <p className="c-para">{item.para}</p>

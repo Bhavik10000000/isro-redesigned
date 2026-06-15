@@ -198,22 +198,58 @@ nav li:hover {
 .mid-home {
   margin-right: 70px;
 }
+
 @keyframes satImg {
-  from {
-    transform: translateX(0) translateY(-50px) translateZ(0) scale(1)
-      rotate(-40deg);
+  0% {
+    transform: translateX(40px) translateY(-50px) translateZ(0) scale(0)
+      rotate(-25deg);
   }
-  to {
-    transform: translateX(-150px) translateY(+100px) translateZ(100px)
-      scale(1.5) rotate(0deg);
+  /* 25% {
+      transform: translateX(-150px) translateY(+50px) translateZ(0px) scale(0.75)
+        rotate(10deg);
+    }
+    50% {
+      transform: translateX(-150px) translateY(+50px) translateZ(0px) scale(1.25)
+        rotate(10deg);
+    }
+    75% {
+      transform: translateX(-150px) translateY(+50px) translateZ(0px) scale(1.75)
+        rotate(10deg);
+    } */
+  100% {
+    transform: translateX(-1200px) translateY(+250px) translateZ(0px) scale(2)
+      rotate(40deg);
   }
 }
 
+/* @keyframes satImg {
+  0% {
+    transform: translateX(40px) translateY(-50px) translateZ(0) scale(0)
+      rotate(-5deg);
+  }
+  /* 25% {
+    transform: translateX(-147px) translateY(100px) translateZ(0px) scale(0.5)
+      rotate(10deg);
+  }*/
+/* 30% {
+    transform: translateX(-534px) translateY(+100px) translateZ(0px) scale(1)
+      rotate(20deg);
+  }  */
+/*
+  75% {
+    transform: translateX(-921px) translateY(+200px) translateZ(0px) scale(1.7)
+      rotate(30deg);
+  } 
+  100% {
+    transform: translateX(-1200px) translateY(+250px) translateZ(0px) scale(2)
+      rotate(50deg);
+  }
+} */
 .mid-home img {
   width: 200px;
-  animation: satImg 10s ease-in-out infinite alternate;
+  animation: satImg 20s ease-in-out infinite;
   user-select: none;
-  /* transition: all 6s ease; */
+  transition: all 6s ease;
 }
 
 /* .mid-home img:hover {
@@ -670,7 +706,7 @@ span-lv {
 
 .contribution-section {
   padding: 20px 0px;
-  background-image:
+  /* background-image:
     linear-gradient(
       rgba(0, 0, 0, 1),
       rgba(0, 0, 0, 0.9),
@@ -679,7 +715,7 @@ span-lv {
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 1)
     ),
-    url("/image3.jpg");
+    url("/image3.jpg"); */
   /* opacity: 50%; */
   background-size: cover;
   background-position: center;
@@ -687,7 +723,7 @@ span-lv {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* height: 510px; */
+  height: 510px;
   padding-bottom: 60px;
   align-items: center;
 }
@@ -695,8 +731,8 @@ span-lv {
 .contribution-grid {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
+  align-items: flex-end;
+  /* gap: 100px; */
   padding: 50px 1% 0px 1%;
   flex-wrap: wrap;
   margin-left: 20px;
@@ -710,25 +746,75 @@ span-lv {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0.09) 0%,
     rgba(255, 255, 255, 0.05) 100%
-  );
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
+  ); */
+  margin: -40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 46px;
   text-align: center;
   padding: 30px 20px 30px;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  backdrop-filter: blur(1px);
+  /* backdrop-filter: blur(1px); */
+  background-color: rgb(43, 5, 84);
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+.card-1 {
+  transform: translateY(120px) rotate(-20deg);
+}
+.card-2 {
+  transform: translateY(50px) rotate(-10deg);
+}
+.card-3 {
+  transform: translateY(10px) rotate(0deg);
+}
+.card-4 {
+  transform: translateY(50px) rotate(+10deg);
+}
+.card-5 {
+  transform: translateY(100px) rotate(+20deg);
 }
 
-.contribution-card:hover {
+.card-1:hover {
+  transform: translateY(-10px) rotate(-20deg);
+  background-color: rgb(0, 0, 0, 0.6);
+  z-index: 1;
+  backdrop-filter: blur(2px);
+}
+.card-2:hover {
+  transform: translateY(-10px) rotate(-10deg);
+  background-color: rgb(0, 0, 0, 0.6);
+
+  z-index: 1;
+}
+.card-3:hover {
+  transform: translateY(-10px) rotate(0deg);
+  background-color: rgb(0, 0, 0, 0.6);
+
+  z-index: 1;
+}
+.card-4:hover {
+  transform: translateY(-10px) rotate(+10deg);
+  background-color: rgb(0, 0, 0, 0.6);
+
+  z-index: 1;
+}
+.card-5:hover {
+  transform: translateY(-10px) rotate(+20deg);
+  background-color: rgb(0, 0, 0, 0.6);
+
+  z-index: 1;
+}
+
+/* .contribution-card:hover {
   transform: translateY(-6px);
   border-color: rgba(255, 255, 255, 1);
   backdrop-filter: blur(0px);
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.06) 10%, #00000005 100%);
-}
+} */
 
 .c-icon-box {
   color: #ffffff;
